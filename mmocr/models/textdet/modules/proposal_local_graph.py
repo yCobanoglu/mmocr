@@ -1,7 +1,10 @@
 import cv2
 import numpy as np
 import torch
-from lanms import merge_quadrangle_n9 as la_nms
+try:
+    from lanms import merge_quadrangle_n9 as la_nms
+except:
+    pass
 from mmcv.ops import RoIAlignRotated
 
 from mmocr.models.textdet.postprocess.wrapper import fill_hole
